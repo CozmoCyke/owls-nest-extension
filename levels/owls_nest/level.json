@@ -1,9 +1,9 @@
 {
-  "title": "Owl's Nest",
-  "description": "Top secret research facility used for strategic R&D projects in the TwilioQuest Program. Birthplace of Cedric and the CEV 'Fog Owl' prototype.",
-  "questTitle": "Leaving the Owl's Nest",
-  "questDescription": "Use WASD or arrow keys to move, spacebar to interact. Flip the blue switch!",
-  "defaultGoal": "Take command of a prototype Cloud Exploration Vessel. Speak with TwilioQuest scientists for help and further information.",
+  "title": "Nid du hibou",
+  "description": "Installation de recherche top secrète utilisée pour des projets de R&D stratégiques dans le cadre du programme TwilioQuest. Lieu de naissance de Cedric et du prototype CEV 'Fog Owl' ",
+  "questTitle": "Quitter le nid du hibou",
+  "questDescription": "Utilisez ZQSD ou les touches fléchées pour vous déplacer, la barre d'espace pour interagir. Retournez l'interrupteur bleu !",
+  "defaultGoal": "Prenez le commandement d'un prototype de vaisseau d'exploration des nuages. Parlez aux scientifiques de TwilioQuest pour obtenir de l'aide et des informations supplémentaires.",
   "disableFogOwlButton": true,
   "mission_icon": "mission_icon.png",
   "is_mission": false,
@@ -17,8 +17,8 @@
     }
   },
   "flavorTextOverrides": {
-    "security_pylon": "These security pylons won't budge until I <em>flip the blue switch on the left</em>.<br/><br/>To interact with an object like the switch, I need to walk over to it and press the <em>spacebar</em>.",
-    "under_construction": "This part of the base looks like it is still under construction."
+    "security_pylon": "Ces pylônes de sécurité ne bougeront pas tant que je n'aurai pas <em>flip the blue switch on the left</em>.<br/><br/>Pour interagir avec un objet comme l'interrupteur, je dois m'en approcher et appuyer sur la <em>barre d'espace</em>",
+    "under_construction": "Cette partie de la base semble être encore en construction."
   },
   "objectives": [
     "hacking_tool_objective", "fire_extinguisher_objective"

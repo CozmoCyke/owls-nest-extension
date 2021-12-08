@@ -3,18 +3,18 @@
 
 mixin break_stuff
   response#break_stuff.
-    Do you make a habit of breaking stuff?
+    Tu as l'habitude de casser des choses ?
 
 mixin get_started
   if worldState.firstObjectiveHacked
     response#get_started.
-      Looks like the hacking tool works as advertised. No more laser barrier.
+      On dirait que l'outil de piratage fonctionne comme annoncé. Plus de barrière laser.
   else if worldState.hackingToolAcquired
     response#get_started.
-      Now that I have the hacking device, what should I do?
+      Maintenant que j'ai le dispositif de piratage, que dois-je faire ?
   else
     response#get_started.
-      I understand you have a tool that might help me with the mission?
+      J'ai cru comprendre que vous aviez un outil qui pourrait m'aider dans cette mission ?
 
 conversation(display_name="Margaret")
   case lastResponse
@@ -22,9 +22,9 @@ conversation(display_name="Margaret")
       statement#break_stuff
       responses
         response#no_harm.
-          Hey, no harm, no foul, amirite?
+          Hey, pas de mal, pas de faute, n'est-ce pas ?
         response#what_vcr.
-          What's a VCR?
+          C'est quoi un magnétoscope ?
 
     when "what_vcr"
       statement#what_vcr
@@ -47,22 +47,22 @@ conversation(display_name="Margaret")
       responses
         if worldState.firstObjectiveHacked
           response#understood.
-            The hacking tool is going to be really useful, thank you! What's our next step?
+            L'outil de piratage va être très utile, merci ! Quelle est notre prochaine étape ?
         else
           response#how_hack.
-            How do I use the hacking tool?
+            Comment utiliser l'outil de piratage ?
     
     when "how_hack"
       statement#how_hack
       responses
         response#understood.
-          Find a thing to hack, complete a task, and reap the rewards. Got it.
+          Trouvez un objet à pirater, accomplissez une tâche, et récoltez les récompenses. Je l'ai.
 
     when "understood"
       statement#keep_moving
       responses
         response#who_are_you.
-          Could you remind me who you are, and what you do here?
+          Pouvez-vous me rappeler qui vous êtes, et ce que vous faites ici ?
 
     default
       if !worldState.margaretInitialGreeting
@@ -70,84 +70,82 @@ conversation(display_name="Margaret")
         statement#default
         responses
           response#who_are_you.
-            Sweet! Have we met yet?
+            Super ! On s'est déjà rencontrés ?
           +get_started
 
       else
         statement#follow_up_greeting
         responses
           response#who_are_you.
-            Could you remind me who you are, and what you do here?
+            Pouvez-vous me rappeler qui vous êtes, et ce que vous faites ici ?
           +get_started
 
   statements
     statement#default
       text.
-        Ooh, ooh, Operator! Over here! I have something to show you.
+        Hého ! Agent ! Par ici ! J'ai quelque chose à vous montrer.
 
     statement#follow_up_greeting
       text.
-        Greetings, fellow human. May I offer wisdom or assistance?
+        Salutations, compagnon humain. Puis-je offrir ma sagesse ou mon aide ?
 
     statement#how_hack
       text.
-        Walk up to an object you think might be hackable, and press the 
-        <span class="highlight">spacebar</span>. That should bring up the hacking 
-        interface. The hacking interface will present you with some kind of 
-        challenge - you might need to write code, answer some questions... stuff like that.
-        <br/><br/>Complete the challenge as described, and SHAZAM! Whatever was
-        locked before is locked no more.
+        Approchez-vous d'un objet que vous pensez pouvoir être piraté, et appuyez sur la touche 
+        <span class="highlight">barre d'espace</span>. Cela devrait faire apparaître l'interface de piratage. L'interface de piratage vous présentera une sorte de défi - vous devrez peut-être écrire du code, répondre à des questions... des trucs comme ça.
+        <br/><br/>Complétez le défi comme décrit, et SHAZAM ! Ce qui était
+        verrouillé auparavant ne l'est plus.
 
     statement#get_started
       if worldState.firstObjectiveHacked
         text.
-          You used the hacking tool to bring down that laser barrier! 
-          Yaaaaaay! Go you!
+          Tu as utilisé l'outil de piratage pour faire tomber cette barrière laser ! 
+          Ouais ! Vas-y toi !
       else if worldState.hackingToolAcquired
         text.
-          Oh, you grabbed the hacking tool off the pedestal? That's great! 
-          It's for you! For adventure!<br/><br/>
-          You should try it out on the 
-          <span class="highlight">terminal attached to those pesky lasers</span>
-          over there.
+          Oh, tu as pris l'outil de piratage sur le piédestal ? C'est génial ! 
+          C'est pour vous ! Pour l'aventure !<br/><br/>
+          Vous devriez l'essayer sur le 
+          <span class="highlight">terminal relié à ces satanés lasers</span>
+          là-bas.
       else 
         text.
-          You better believe I do. It's that <span class="highlight">hacking tool 
-          sitting on the pedestal over there</span>. With that little wonder, 
-          you'll be able to break all kinds of things - in the name of justice 
-          of course.<br/><br/> You can use the hacking tool to bypass locked doors, 
-          open chests, and notably, to <span class="highlight">shut down laser barriers</span> 
-          like the one in this room.
+          Vous feriez mieux de croire que oui. C'est ce <span class="highlight">outil de piratage 
+          assis sur le piédestal là-bas</span>. Avec cette petite merveille, 
+          tu pourras casser toutes sortes de choses, au nom de la justice. 
+          bien sûr. <br/><br/>Vous pouvez utiliser l'outil de piratage pour contourner des portes verrouillées, 
+          ouvrir des coffres, et notamment, pour <span class="highlight">faire tomber des barrières laser</span> 
+          comme celle qui se trouve dans cette pièce.
     
     statement#margaret
       text.
-        <span class="highlight">Margaret</span>, and very pleased to make 
-        your acquaintance. I'm an experimental scientist in the TwilioQuest 
-        program, and the inventor of the super-duper-handy hacking tool you'll 
-        use on your adventures. <br/><br/> I have basically the best job ever - 
-        I get to break things, and put them back together again, and no one 
-        seems to mind!
+        <span class="highlight">Margaret</span>, et très heureux de faire 
+        de faire votre connaissance. Je suis une scientifique expérimentale du programme TwilioQuest. 
+        et l'inventeur de l'outil de piratage super pratique que tu utiliseras 
+        que vous utiliserez dans vos aventures. <br/><br/>J'ai fondamentalement le meilleur travail du monde - 
+        Je dois casser des choses, et les remettre en place, et personne 
+        ne semble s'en soucier !
     
     statement#break_stuff
       text.
-        I wouldn't say it's a habit so much as a sacred calling. I lost track of 
-        how many times as a kid I took apart our VCR and put it back together again.
+        Je ne dirais pas que c'est une habitude, mais plutôt une vocation sacrée. J'ai perdu le compte du 
+        combien de fois, enfant, j'ai démonté notre magnétoscope et l'ai remonté.
 
     statement#what_vcr
       text.
-        Unsure if I am being trolled, or am just legitimately super old.
+        Je ne sais pas si je suis victime d'un troll, ou si je suis juste légitimement super vieux.
   
     statement#extra_parts
       text.
-        I usually had a few extra parts left over, but our VHS tapes of Ghostbusters 
-        still seemed to work. So I guess it was fine?
+        Il me restait souvent quelques pièces, mais nos cassettes VHS de Ghostbusters 
+        semblaient toujours fonctionner. Donc je suppose que c'était bien ?
 
     statement#keep_moving
       text.
-        With your hackery complete, you'll want to head through the door to meet 
-        <span class="highlight">Cedric and Kevin</span>. After that, I think you're off on your 
-        big adventure aboard the Fog Owl. I'm so proud our little bird is about
-        to leave the nest!
+        Une fois votre piratage terminé, vous voudrez franchir la porte pour rencontrer 
+        <span class="highlight">Cedric et Kevin</span>. Après cela, je pense que vous êtes prêt pour votre 
+        grande aventure à bord du Fog Owl. Je suis si fier que notre petit oiseau soit sur le point de
+        de quitter le nid !
 
 // Flush world state changes, if any
 - setState(STATE_KEY, worldState);

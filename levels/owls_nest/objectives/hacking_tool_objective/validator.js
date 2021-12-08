@@ -5,27 +5,27 @@ module.exports = async function (helper) {
 
   if (!worldState.hackingToolAcquired) {
     return helper.fail(`
-      Bypassing this system requires the <strong>hacking tool</strong>. 
-      Get the hacking tool by walking to the pedestal in this room and pressing 
-      the spacebar.
+      Le contournement de ce système nécessite l'<strong>outil de piratage</strong>. 
+      Obtenez l'outil de piratage en marchant vers le piédestal dans cette pièce et en appuyant sur 
+      la barre d'espacement.
     `);
   }
 
   if (!passcode) {
-    return helper.fail('BZZZT! Laser override passcode is required.');
+    return helper.fail('BZZZT ! Le code d\'annulation du laser est requis.');
   }
 
   if (passcode !== 'level up') {
     return helper.fail(`
-      Passcode not recognized. Please read the "Objective" section of the
-      hack interface to reveal the correct passcode.
+      Le code d'accès n'est pas reconnu. Veuillez lire la section "Objectif" de l'interface de
+      interface de piratage pour révéler le bon code d'accès.
     `);
   }
 
   // The way we usually write validators is to fail fast, and then if we reach
   // the end, we know the user got all the answers right!
   helper.success(`
-    You enter the passcode needed to bypass the lasers. Soon after, the lasers
-    retract and clear your path forward to the Fog Owl!
+    Vous entrez le code d'accès nécessaire pour contourner les lasers. Peu après, les lasers
+    se rétractent et libèrent votre chemin vers le Fog Owl!
   `);
 };

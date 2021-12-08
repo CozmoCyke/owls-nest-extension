@@ -1,36 +1,36 @@
-# Practicing Code Safety
+# Pratiquer la sécurité du code
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Read the safety tips in this brief safety tutorial.</li>
-  <li>Answer the questions on the right-hand side of the Hack Interface.</li>
-  <li>When you have done so, click the <em>HACK</em> button.</li>
+  <li>Lisez les conseils de sécurité dans ce bref tutoriel de sécurité.</li>
+  <li>Réponds aux questions qui se trouvent sur le côté droit de l'interface de Piratage.</li>
+  <li>Quand vous l'avez fait, cliquez sur le bouton <em>HACK</em>.</li>
 </ul>
 </div>
 
-The challenges to come in TwilioQuest will guide you through the process of downloading software development tools, and executing the code you write on your computer. Exciting, right?!
+Les défis à venir dans TwilioQuest vous guideront à travers le processus de téléchargement d'outils de développement de logiciels, et d'exécution du code que vous écrivez sur votre ordinateur. Excitant, non ? !
 
-It \*is\* very exciting, but there are a few safety precautions you should be aware of when getting started in software development. Once you have read through the safety tips below, answer the questions on the right, and click *HACK*. You'll be all set for TwilioQuest, and to save Ryan with the fire extinguisher!
+C'\*est\* très excitant, mais il y a quelques précautions à prendre lorsque vous vous lancez dans le développement de logiciels. Après avoir lu les conseils de sécurité ci-dessous, répondez aux questions à droite et cliquez sur *HACK*. Vous serez fin prêt pour TwilioQuest, et pour sauver Ryan avec l'extincteur !
 
-## Know Before You Code
+## Savoir avant de coder
 
 <details>
-<summary>Be careful what you download and install</summary>
+<summary>Faites attention à ce que vous téléchargez et installez</summary>
 
-Software development tools and third party software libraries (you'll learn about those later) have extensive access to data that may be on your computer, or that you access through a web browser. Be sure that you only download and install software from trusted sources!
+Les outils de développement de logiciels et les bibliothèques de logiciels tiers (que vous découvrirez plus tard) ont un accès étendu aux données qui peuvent se trouver sur votre ordinateur ou auxquelles vous accédez via un navigateur web. Veillez à ne télécharger et à n'installer que des logiciels provenant de sources fiables !
 </details>
 
 <details>
-<summary>Copy and paste with care</summary>
+<summary>Copier et coller avec précaution</summary>
 
-All developers copy and paste code samples they find on the Internet, but this is another area where you should exercise caution. If you don't know what a particular command or piece of code does, find a trusted mentor or teacher to ask more questions. When you execute code, it can usually do anything you can do as a user of the computer (like access your personal files and data).
+Tous les développeurs copient et collent des exemples de code qu'ils trouvent sur Internet, mais c'est un autre domaine où vous devez faire preuve de prudence. Si vous ne savez pas ce que fait une commande ou un morceau de code particulier, trouvez un mentor ou un professeur de confiance pour poser plus de questions. Lorsque vous exécutez du code, celui-ci peut généralement faire tout ce que vous pouvez faire en tant qu'utilisateur de l'ordinateur (comme accéder à vos fichiers et données personnels).
 </details>
 
 <details>
-<summary>Look out for sensitive data in your code</summary>
+<summary>Faites attention aux données sensibles dans votre code</summary>
 
-As you progress as a software developer, you and your code will encounter various types of sensitive data. Email addresses, phone numbers, and other details about individuals (yourself or others). Whenever you work with personal data in your code, think about how and where that information is being stored and accessed. Are you storing data in a code file? If so, who has access to that code file? Could it be accidentally shared with others on [GitHub](https://github.com) or other file sharing systems?
+Au fur et à mesure de votre progression en tant que développeur de logiciels, vous et votre code rencontrerez divers types de données sensibles. Adresses électroniques, numéros de téléphone et autres détails concernant des personnes (vous-même ou d'autres). Chaque fois que vous travaillez avec des données personnelles dans votre code, pensez à la manière dont ces informations sont stockées et accessibles, et à l'endroit où elles le sont. Stockez-vous des données dans un fichier de code ? Si oui, qui a accès à ce fichier de code ? Peut-il être accidentellement partagé avec d'autres personnes sur [GitHub](https://github.com) ou d'autres systèmes de partage de fichiers ?
 
-Asking yourself these questions when dealing with data will help keep you and your users safe.
+En vous posant ces questions lorsque vous traitez des données, vous assurerez votre sécurité et celle de vos utilisateurs.
 </details>

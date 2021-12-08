@@ -48,14 +48,14 @@ module.exports = {
 
       if (levelState.missionComplete) {
         world.showNotification(`
-          With the self destruct disabled, the Fog Owl shows green across the
-          board. The Owl is ready to fly!
+        Avec l'autodestruction désactivée, le Fog Owl affiche du vert sur tout le tableau.
+        tableau. Il est prêt à voler !
         `);
       } else if (levelState.ryanSaved) {
         world.showNotification(`
-          You hear an automated voice over the PA system:<br/><br/>
-          "Self destruct sequence disabled. Imminent destruction prevented.
-          Have a nice day, and please drive home safely."
+        Vous entendez une voix automatisée sur le système de sonorisation : <br/><br/>
+        "Séquence d'autodestruction désactivée. Destruction imminente évitée.
+        Passez une bonne journée et rentrez chez vous en toute sécurité."
         `);
         await world.wait(5000);
         levelState.missionComplete = true;
@@ -63,14 +63,14 @@ module.exports = {
         window.warp('owls_nest', 'player_entry1', 'victory');
       } else if (levelState.fredricThreatReceived) {
         world.showNotification(`
-          The console is completely inoperable. You need to <em>find Ryan
-          and retrieve his access codes</em> to access the console and abort
-          the Fog Owl's self-destruct sequence.
+        La console est complètement inopérante. Vous devez <em>trouver Ryan
+        et récupérer ses codes d'accès</em> pour accéder à la console et interrompre
+        la séquence d'autodestruction du Fog Owl.
         `);
       } else {
         world.showNotification(`
-          This console controls the Fog Owl's preflight routines. It looks like
-          it's almost ready for launch.
+        Cette console contrôle les routines de pré-vol du Fog Owl. On dirait que
+        qu'il est presque prêt pour le lancement.
         `);
       }
     }

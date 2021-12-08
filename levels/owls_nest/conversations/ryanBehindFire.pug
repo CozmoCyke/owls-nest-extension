@@ -7,7 +7,7 @@ conversation(display_name="Ryan")
       statement#how_help
       responses
         response#on_it.
-          Don't worry - I'll grab the fire extinguisher.
+          Ne vous inquiétez pas, je vais prendre l'extincteur.
     
     when "on_it"
       statement#thanks
@@ -17,25 +17,24 @@ conversation(display_name="Ryan")
       statement#oh_no
       responses
         response#how_help.
-          Ryan? I'll help you if I can, but I don't know how to get past these 
-          flames.
+          Ryan ? Je t'aiderai si je peux, mais je ne sais pas comment franchir ces 
+          flammes.
 
   statements
     statement#thanks
       text.
-        I owe you one! Once you have the fire extinguisher, walk up to the flames 
-        and <span class="highlight">press the spacebar</span>. The fire extinguisher 
-        should deploy automatically. 
+        Je vous en dois une ! Une fois que tu as l'extincteur, marche vers les flammes 
+        et <span class="highlight">appuie sur la barre d'espace</span>. L'extincteur 
+        devrait se déployer automatiquement. 
     statement#how_help
       text.
-        There should be a <span class="highlight">fire extinguisher</span>
-        in the storage room! It will be inside a <span class="highlight">red chest</span>.
-        <br/><br/>With all the station security going haywire, you may need to 
-        <span class="highlight">hack the chest</span> first. Once you get the 
-        fire extinguisher, head back here and put out the flames. Please?
+        Il devrait y avoir un <span class="highlight">extincteur</span>
+        dans la salle de stockage ! Il sera à l'intérieur d'un <span class="highlight">coffre rouge</span>.
+        <br/><br/>Avec toute la sécurité de la station qui se dérègle, vous devrez peut-être . 
+        <span class="highlight">attaquer le coffre</span> d'abord. Une fois que vous avez l'extincteur , revenez ici et éteignez les flammes. S'il te plaît ?
     statement#oh_no
       text.
-        Hey! Operator! Little help?
+        Hé ! Agent ! Un peu d'aide ?
 
 // Flush world state changes, if any
 - setState(STATE_KEY, worldState);

@@ -3,25 +3,25 @@
 
 mixin about_team
   response#cedric_index.
-    Cedric, I was wondering if I could ask you a few questions?
+    Cedric, je me demandais si je pouvais vous poser quelques questions ?
   response#kevin_index.
-    Could I ask you something, Kevin?
+    Je peux te demander quelque chose, Kevin ?
 
 mixin cedric_questions
   response#cedric_job.
-    What's your role in the TwilioQuest Program?
+    Quel est votre rôle dans le programme TwilioQuest ?
   response#cedric_related_kevin.
-    Do you work closely with Kevin?
+    Travaillez-vous en étroite collaboration avec Kevin ?
   response#cedric_conversation_index.
-    Actually, I had other questions...
+    En fait, j'avais d'autres questions...
 
 mixin kevin_questions
   response#kevin_job.
-    What's your role in the TwilioQuest Program?
+    Quel est votre rôle dans le programme TwilioQuest ?
   response#kevin_related_cedric.
-    Do you work closely with Cedric?
+    Travaillez-vous en étroite collaboration avec Cedric ?
   response#kevin_conversation_index.
-    Actually, I had other questions...
+    En fait, j'avais d'autres questions...
 
 mixin get_started
   if worldState.fredricThreatReceived
@@ -29,7 +29,7 @@ mixin get_started
       FREDRIC PLACEHOLDER
   else
     response#kevin_get_started.
-      I'd love to check out the Fog Owl if possible - I can't wait to see what it can do!
+      J'aimerais bien essayer le Fog Owl si possible - j'ai hâte de voir ce qu'il peut faire !
 
 - 
   let speaker = 'Cedric';
@@ -69,7 +69,7 @@ conversation(display_name=speaker)
       statement(expression="kevinNeutral.png")#kevin_related_cedric
       responses
         response#kevin_kid_low_pressure.
-          Robotic children - good idea! Can't mess them up too badly, right?
+          Des enfants robots - bonne idée ! On ne peut pas trop les abîmer, non ?
         +kevin_questions
     when "kevin_kid_low_pressure"
       statement(expression="kevinNeutral.png")#kevin_kid_low_pressure
@@ -79,14 +79,14 @@ conversation(display_name=speaker)
       statement(expression="kevinNeutral.png")#kevin_get_started
       responses
         response#kevin_next_step.
-          The Owl sounds like quite a ship - is it ready for launch?
+          Le Fog Owl semble être un sacré vaisseau - est-il prêt à être lancé ?
         response#kevin_espresso_machine.
-          The espresso machine was a nice touch.
+          La machine à expresso était une touche agréable.
     when "kevin_espresso_machine"
       statement(expression="kevinNeutral.png")#kevin_espresso_machine
       responses
         response#kevin_next_step.
-          The Owl sounds like quite a ship - is it ready for launch?
+          Le Fog Owl semble être un sacré vaisseau - est-il prêt à être lancé ?
     when "kevin_next_step"
       statement(expression="kevinNeutral.png")#kevin_next_step
       responses
@@ -117,7 +117,7 @@ conversation(display_name=speaker)
         statement#default
         responses
           response#kevin_who_are_you.
-            I believe I am! Cedric and Kevin, I may presume?
+            Je crois que oui ! Cedric et Kevin, je présume ?
           +get_started
 
       else
@@ -129,99 +129,96 @@ conversation(display_name=speaker)
   statements
     statement#no_time
       text.
-        Operator. I am erecting new firewalls as quickly as I can, but you must
-        <span class="highlight">retrieve the override codes from Engineer Kubik</span> to
-        abort the Fog Owl's self destruct sequence.<br/><br/>Once you retrieve 
-        the codes, use the control panel near the Fog Owl to save the ship and 
-        the station.
+        Agent. J'érige de nouveaux pare-feu aussi vite que possible, mais vous devez
+        <span class="highlight">récupérer les codes d'annulation de l'ingénieur Kubik</span> pour
+        interrompre la séquence d'autodestruction du Fog Owl.<br/><br/>Une fois que vous aurez 
+        récupéré les codes, utilisez le panneau de contrôle près du Fog Owl pour sauver le vaisseau et la station.
 
     statement#cedric_index
       text.
-        Standing by for query input.
+        En attente de l'entrée des requêtes.
 
     statement#cedric_job
       text.
-        I am an advanced artificial intelligence, designed to assist Operators on 
-        assignment in The Cloud. When my programming is deemed ready by the
-        TwilioQuest Program, I intend to serve aboard a ship like yours.<br/><br/>
-        I have much to learn about humanity, and I believe direct observation is 
-        required to complete my analysis.
+        Je suis une intelligence artificielle avancée, conçue pour assister les agents en 
+        en mission dans le Cloud. Lorsque ma programmation sera jugée prête par le programme
+        Programme TwilioQuest, j'ai l'intention de servir à bord d'un vaisseau comme le vôtre.<br/><br/>
+        J'ai beaucoup à apprendre sur l'humanité, et je crois que l'observation directe est 
+        nécessaire pour compléter mon analyse.
 
     statement#kevin_who_are_you
       text.
-        You presume correctly, and we're excited to finally meet you face to face! 
-        Cedric and I have been searching for a long time to find the right leader 
-        to take the <span class="highlight">Fog Owl</span> out on it's first 
-        flight, and we think you've got what it takes. <br/><br/>Ready to get on board and
-        take a look around?
+        Vous présumez bien, et nous sommes ravis de vous rencontrer enfin face à face ! 
+        Cédric et moi avons cherché pendant longtemps à trouver le bon leader 
+        pour emmener le Fog Owl lors de son premier vol. 
+        et nous pensons que tu as ce qu'il faut. <br/><br/>Prêt à monter à bord et à
+        jeter un coup d'oeil ?
 
     statement#cedric_related_kevin
       text.
-        Operator #00000000000 is credited with the vast majority of commits to 
-        my codebase, and has designed much of my training data consumption model 
-        and executive functions. Were I a human, I might regard him as a parent.
+        L'agent #00000000000 est crédité de la grande majorité des commits dans 
+        ma base de code, et a conçu une grande partie de mon modèle de consommation de données de formation 
+        et des fonctions exécutives. Si j'étais humain, je pourrais le considérer comme un parent.
 
     statement#kevin_index
       text.
-        Yeah, of course. Fire away.
+        Oui, bien sûr. Allez-y, tirez.
 
     statement#kevin_job
       text.
-        I'm the director of the TwilioQuest Program. My job is to recruit Operators 
-        like you, and support them in any way I can.<br/><br/>These days though,
-        I spend most of my time working on Cedric and his higher order processing 
-        functions.
+        Je suis le directeur du programme TwilioQuest. Mon travail consiste à recruter des agents 
+        comme vous, et de les soutenir de toutes les manières possibles. <br/><br/>Cependant, ces jours-ci,
+        je passe le plus clair de mon temps à travailler sur Cédric et ses fonctions de traitement.
 
     statement#kevin_related_cedric
       text.
-        I've worked on Cedric's codebase for years now. In many ways, he's like 
-        a son to me. At his request, I've tried to teach him about the
-        best parts of humanity: kindness, curiosity, courage...<br/><br/>
-        I'd say he's become an even better human than I am! I'm very proud of 
-        his progress, and I think he's ready to serve alongside an Operator.
+        Je travaille sur la base de code de Cedric depuis des années maintenant. De bien des façons, il est comme 
+        un fils pour moi. A sa demande, j'ai essayé de lui enseigner ce qui est les
+        meilleures parties de l'humanité : la gentillesse, la curiosité, le courage... <br/><br/>
+        Je dirais qu'il est devenu un humain encore meilleur que moi ! Je suis très fier de 
+        ses progrès, et je pense qu'il est prêt à servir aux côtés d'un agent.
 
     statement#kevin_kid_low_pressure
       text.
-        ...<br/><br/>If only you were right.
+        ...<br/><br/>Si seulement tu avais raison.
 
     statement#default
       text.
-        New Operator detected... Cross-referencing classified personnel database... 
-        You are the <span class="highlight">new commander of the Fog Owl</span>,
-        are you not?
+        Nouvel agent détecté... Recoupement de la base de données du personnel classifié... 
+        Vous êtes le <span class="highlight">nouveau commandant du Fog Owl</span>,
+        n'est-ce pas ?
 
     statement#follow_up_greeting
       text.
-        Hey there! How can we help?
+        Hé là ! Comment pouvons-nous vous aider ?
 
     statement#cedric_conversation_index
       text.
-        Ask, and I shall endeavor to answer them to the best of my ability.
+        Posez vos questions, et je m'efforcerai d'y répondre au mieux de mes capacités.
 
     statement#kevin_conversation_index
       text.
-        Sure - what did you want to talk about?
+        Bien sûr - de quoi voulais-tu parler ?
 
     statement#kevin_espresso_machine
       text.
-        Right? I didn't know if we'd actually use it, but it turns out we do all 
-        the time.
+        C'est vrai ? Je ne savais pas si nous allions l'utiliser, mais il s'avère que nous le faisons tout 
+        le temps.
 
     statement#kevin_get_started
       text.
-        We can't wait to see what the Owl can do either! Top of the line packet 
-        transmission drive, advanced location encryption, and an espresso machine!
-        <br/><br/>The Fog Owl is tough, fast, and stealthy. Once you shake it 
-        down and prove that the tech works, we can roll it out to Operators all 
-        across The Cloud.
+        Nous avons hâte de voir ce que le Fog Owl peut faire lui aussi ! Un paquet haut de gamme 
+        lecteur de transmission, cryptage de localisation avancé, et une machine à expresso !
+        <br/><br/>Le Fog Owl est résistant, rapide et furtif. Une fois que vous l'avez secoué 
+        et que vous aurez prouvé que la technologie fonctionne, nous pourrons la déployer auprès de tous les agents 
+        à travers le Cloud.
 
     statement#kevin_next_step
       text.
-        Just about. We have a few more calibrations to complete on the starboard
-        TCP ports, but we should have you ready for liftoff inside the hour.<br/><br/>
-        In the meantime, you should <span class="highlight">check out the ship and meet your crew</span>.
-        They're a good bunch - some of our best. Be sure to lean on them when you 
-        need a hand.
+        Presque. Nous avons encore quelques calibrations à compléter sur les ports TCP tribord, mais nous devrions vous avoir prêt pour le décollage dans l'heure.<br/><br/>
+        En attendant, vous devriez <span class="highlight">vérifier le vaisseau et rencontrer votre équipage</span>.
+        C'est un bon groupe - certains de nos meilleurs. Assure-toi de t'appuyer sur eux quand tu 
+        vous aurez besoin d'aide.
 
 // Flush world state changes, if any
 - setState(STATE_KEY, worldState);

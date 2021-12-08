@@ -4,9 +4,9 @@ module.exports = async function (helper) {
     helper.validationFields.answer1 !== 'true'
   ) {
     return helper.fail(`
-      The first answer is incorrect. Software installed on your computer
-      often has privileged access to your data and personal files. You should
-      be careful what you download and install on your computer!
+    La première réponse est incorrecte. Les logiciels installés sur votre ordinateur
+    ont souvent un accès privilégié à vos données et fichiers personnels. Vous devez donc
+    faire attention à ce que vous téléchargez et installez sur votre ordinateur !
     `);
   }
 
@@ -15,9 +15,8 @@ module.exports = async function (helper) {
     helper.validationFields.answer2 !== 'false'
   ) {
     return helper.fail(`
-      The second answer is incorrect. Code that you copy and paste from the
-      Internet can be helpful, but make sure you know what it does before you
-      run it!
+    La deuxième réponse est incorrecte. Le code que vous copiez et collez depuis l'Internet
+    Internet peut être utile, mais assurez-vous de savoir ce qu'il fait avant de l'exécuter !
     `);
   }
 
@@ -26,17 +25,16 @@ module.exports = async function (helper) {
     helper.validationFields.answer3 !== 'false'
   ) {
     return helper.fail(`
-      The third answer is incorrect. It's risky to keep personal data like
-      email addresses or passwords in a code file. You might accidentally
-      share the code with someone else, which would violate your privacy, or
-      the privacy of others. Be careful with personal data! Make sure you know
-      how it will be stored, and that your code doesn't enable another person
-      to see it without good reason.
-    `);
+    La troisième réponse est incorrecte. Il est risqué de conserver des données personnelles comme
+    adresses électroniques ou les mots de passe dans un fichier codé. Vous pourriez accidentellement
+    partager le code avec quelqu'un d'autre, ce qui violerait votre vie privée ou celle d'autres personnes.
+    Soyez prudent avec les données personnelles ! Assurez-vous de savoir
+    comment elles seront stockées, et que votre code ne permet pas à une autre personne de les voir sans raison valable.
+  `) ;
   }
 
   helper.success(`
-    You did it! After confirming your knowledge of computer safety, the chest
-    pops open and you retrieve the fire extinguisher you will need to save Ryan.
+  Vous l'avez fait ! Après avoir confirmé tes connaissances en matière de sécurité informatique, le coffre
+  s'ouvre et tu récupères l'extincteur dont tu auras besoin pour sauver Ryan.
   `);
 };

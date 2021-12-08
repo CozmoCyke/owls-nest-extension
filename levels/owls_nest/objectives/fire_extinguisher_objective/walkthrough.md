@@ -1,5 +1,5 @@
-# The "Help" Tab
+# L'onglet "Aide"
 
-We may remove this tab and content in the future, but in the current iteration of TwilioQuest, this is where you would put more hand-holdy content intended to guide the player through what needed to be done.
+Il se peut que nous supprimions cet onglet et son contenu à l'avenir, mais dans l'itération actuelle de TwilioQuest, c'est ici que vous placerez le contenu plus pratique destiné à guider le joueur dans ce qu'il doit faire.
 
-We find that what works better is linking to external resources on the web, rather than recreatign a tutorial here.
+Nous constatons que les liens vers des ressources externes sur le Web sont plus efficaces que la recréation d'un tutoriel ici.

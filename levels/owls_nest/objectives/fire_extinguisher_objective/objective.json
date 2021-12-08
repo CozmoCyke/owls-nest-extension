@@ -1,21 +1,21 @@
 {
-  "title": "Code Safety",
-  "description": "Inside this chest is a <strong>fire extinguisher</strong> you can use to put out fires. Prove you're ready to use code responsibly to get this item!",
+  "title": "Sécurité du code",
+  "description": "A l'intérieur de ce coffre se trouve un <strong>extincteur</strong> que tu peux utiliser pour éteindre les incendies. Prouve que tu es prêt à utiliser le code de manière responsable pour obtenir cet objet !",
   "validation_fields": [
     {
       "name": "answer1",
       "type": "boolean",
-      "label": "True or False: Software you install on your computer can potentially access your files and personal data."
+      "label": "Vrai ou faux : Les logiciels que vous installez sur votre ordinateur peuvent potentiellement accéder à vos fichiers et à vos données personnelles."
     },
     {
       "name": "answer2",
       "type": "boolean",
-      "label": "True or False: Code samples you copy, paste, and run from the Internet cannot harm your computer."
+      "label": "Vrai ou faux : Les échantillons de code que vous copiez, collez et exécutez à partir d'Internet ne peuvent pas endommager votre ordinateur."
     },
     {
       "name": "answer3",
       "type": "boolean",
-      "label": "True or False: It is always safe to keep passwords, emails, and other personal data in code files."
+      "label": "Vrai ou Faux : Il est toujours prudent de conserver les mots de passe, les courriels et les autres données personnelles dans des fichiers codés."
     }
   ],
   "rewards": {

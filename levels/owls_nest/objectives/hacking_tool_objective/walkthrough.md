@@ -1,3 +1,3 @@
-# More Security Tips
+# Plus d'astuces de sécurité
 
-This objective goes over some of the very basics of secure computer use, but building secure software is a whole other ballgame. [Learn more about software development security here](https://en.wikipedia.org/wiki/Software_development_security), and keep an eye on TwilioQuest for more security concepts!
+Cet objectif aborde certaines des bases de l'utilisation sécurisée d'un ordinateur, mais la création de logiciels sécurisés est une toute autre paire de manches. [Pour en savoir plus sur la sécurité du développement logiciel, cliquez ici (https://en.wikipedia.org/wiki/Software_development_security), et gardez un œil sur TwilioQuest pour d'autres concepts de sécurité !

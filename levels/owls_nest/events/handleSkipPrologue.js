@@ -16,7 +16,7 @@ function handleSkipPrologue(event, world, worldState) {
     skipPrologueButton.onclick = () => {
       if (
         window.confirm(
-          `Are you sure you want to skip the rest of the prologue and be warped straight to the Fog Owl?`
+          `Êtes-vous sûrs de vouloir sauter le reste du prologue et d'être dirigés directement vers le Fog Owl ?`
         )
       ) {
         worldState.shouldSkipPrologue = true;

@@ -3,15 +3,15 @@
 
 mixin relieved
   response#relieved.
-    You seemed to be relieved I made it into The Cloud alive...
+    Tu semblais soulagé que je sois arrivé vivant dans le Cloud...
 
 mixin get_started
   if worldState.movementSwitch
     response#understood.
-      I've cleared the security pylons - what should I do next?
+      J'ai franchi les pylônes de sécurité - que dois-je faire ensuite ?
   else
     response#get_started.
-      I was asked to report here for a critical mission - should we get started?
+      On m'a demandé de me présenter ici pour une mission critique - devons-nous commencer ?
 
 conversation(display_name="Chiara")
   case lastResponse
@@ -19,7 +19,7 @@ conversation(display_name="Chiara")
       statement#relieved
       responses
         response#fish.
-          ...fish?
+          ...du poisson ?
 
     when "fish"
       statement#tell_right_away
@@ -36,13 +36,13 @@ conversation(display_name="Chiara")
       statement#get_started
       responses
         response#letsgo.
-          Fair enough - what do you need me to do?
+          D'accord - qu'est-ce que tu veux que je fasse ?
     
     when "letsgo"
       statement#test_motor
       responses
         response#understood.
-          Understood - after I flip the switch, what next?
+          Compris - après avoir actionné l'interrupteur, quelle est la suite ?
 
     when "understood"
       statement#keep_moving
@@ -55,72 +55,72 @@ conversation(display_name="Chiara")
         statement#default
         responses
           response#who_are_you.
-            It's certainly better than the alternative. I don't think we've been introduced?
+            C'est certainement mieux que l'alternative. Je ne pense pas que nous ayons été présentés ?
           +get_started
 
       else
         statement#follow_up_greeting
         responses
           response#who_are_you.
-            Could you remind me who you are, and what you do here?
+            Pouvez-vous me rappeler qui vous êtes, et ce que vous faites ici ?
           +get_started
 
   statements
     statement#default
       text.
-        Neural interface is stable... All life signs within normal parameters.
-        You're here, and you're alive! Isn't that wonderful!
+        L'interface neurale est stable... Tous les signes vitaux sont dans des paramètres normaux.
+        Tu es là, et tu es vivant ! N'est-ce pas merveilleux ?
 
     statement#follow_up_greeting
       text.
-        Hi !{settings.name}! Are you feeling okay? Is there anything I can help with?
+        Bonjour !{settings.name}! Vous vous sentez bien ? Je peux vous aider en quoi que ce soit ?
     
     statement#chiara
       text.
-        Oh, right, sure, of course. <span class="highlight">Chiara</span>, 
-        chief medical officer with the TwilioQuest program. I actually designed 
-        the new neural interface through which you are experiencing The Cloud. <br/><br/>
-        It would be a pleasure to meet you in any event, but today it is a
-        particular thrill - I wasn't quite sure this version of the interface 
-        was going to work!
+        Oh, oui, bien sûr, bien sûr. <span class="highlight">Chiara</span>, 
+        médecin en chef du programme TwilioQuest. J'ai en fait conçu 
+        la nouvelle interface neuronale par laquelle vous expérimentez le Cloud. <br/><br/>
+        Ce serait un plaisir de vous rencontrer dans n'importe quel circonstance, mais aujourd'hui c'est une
+        particulièrement excitante - je n'étais pas tout à fait sûr que cette version de l'interface 
+        allait fonctionner !
     
     statement#relieved
       text.
-        Did I? Oh, no, I assure you, the neural interface is completely safe.<br/><br/>
-        On an unrelated note - you don't happen to smell fish, do you?
+        Je l'ai fait ? Oh, non, je vous assure, l'interface neurale est complètement sûre. <br/><br/>
+        Sur une note sans rapport - vous ne sentez pas le poisson, n'est-ce pas ?
 
     statement#tell_right_away
       text.
-        I know, what a silly question. Why would you? There's no fish around here!<br/><br/>
-        But if you do start smelling fish, you need to tell me RIGHT AWAY, do 
-        you understand? Good? Good.
+        Je sais, quelle question idiote. Pourquoi le ferais-tu ? Il n'y a pas de poisson par ici !<br/><br/>
+        Mais si vous commencez à sentir du poisson, vous devez me le dire TOUT DE SUITE, compris ? 
+        vous comprenez ? Bien ? Bien.
 
     statement#keep_moving
       text.
-        Proceed through the medical bay door into the tech lab. Margaret will 
-        want to speak with you next - she'll equip you with a
-        <span class="highlight">critical tool</span> you'll need while exploring
-        The Cloud. Good luck out there!
+        Passez la porte de l'infirmerie dans le laboratoire technique. Margaret voudra 
+        vous parler ensuite - elle vous équipera d'un
+        <span class="highlight">outil critique</span> dont vous aurez besoin lors de votre exploration du
+        Cloud. Bonne chance !
 
     statement#test_motor
       text.
-        I'll need you to use <span class="highlight">basic movement and interaction controls</span>
-        to activate a switch near the exit to the medical bay. If you can do so,
-        we can be confident that your neural interface is configured correctly.<br/><br/>
-        You can move your avatar using the <span class="highlight">arrow keys, or the W, A, S, and D keys</span>.
-        You can interact with objects - the switch, for instance - 
-        using the <span class="highlight">spacebar</span>.
+        J'ai besoin que vous utilisiez <span class="highlight">les contrôles basiques de mouvement et d'interaction</span>
+        pour activer un interrupteur près de la sortie de l'infirmerie. Si vous pouvez le faire,
+        nous pourrons être sûrs que votre interface neurale est configurée correctement.<br/><br/>
+        Vous pouvez déplacer votre avatar en utilisant les <span class="highlight">touches fléchées, ou les touches Z, Q, S, et D</span>.
+        Vous pouvez interagir avec les objets - l'interrupteur, par exemple - 
+        en utilisant la <span class="highlight">barre d'espace</span>.
 
     statement#get_started
       text.
-        Indeed. You've been selected from thousands of Operators to take command
-        of a prototype Cloud Exploration Vessel we call the 
+        En effet. Vous avez été sélectionné parmi des milliers d'agents pour prendre les commandes
+        d'un prototype de vaisseau d'exploration du cloud que nous appelons le 
         <span class="highlight">Fog Owl</span>.
-        The Owl represents years of research and billions of dollars in cutting 
-        edge technology. More importantly, it could finally let us stay one step 
-        ahead of the Legacy Systems.<br/><br/> Before we worry about any 
-        of that, though, we'll need to check your basic motor functions and ensure
-        you are fit for duty.
+        Le Fog Owl représente des années de recherche et des milliards de dollars en technologie de pointe. 
+        Plus important encore, il pourrait enfin nous permettre de garder une longueur d'avance sur les Anciens Systèmes.
+        Avant de nous inquiéter de tout cela. 
+        cependant, nous aurons besoin de vérifier vos fonctions motrices de base et de s'assurer que
+        que vous êtes apte au service.
 
 // Flush world state changes, if any
 - setState(STATE_KEY, worldState);

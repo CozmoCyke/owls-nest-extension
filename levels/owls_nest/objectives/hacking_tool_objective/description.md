@@ -2,20 +2,20 @@
 const worldState = levelState['com.twilioquest.owls_nest'];
 %>
 
-# Learning the Hack Interface
+# Apprendre l'interface Hack
 
 <div class="aside">
-<h3>To-Do List</h3>
+<h3>Liste de tâches à accomplir</h3>
 <ul>
-  <li>Get the hacking tool from the pedestal in this room.</li>
-  <li>Find the secret passcode in the "Objective" tab (this screen).</li>
-  <li>Enter the passcode in the field on the right, then click <em>HACK</em>.</li>
+  <li>Prenez l'outil de piratage sur le piédestal dans cette pièce.</li>
+  <li>Trouvez le code secret dans l'onglet "Objective" (cet écran).</li>
+  <li>Saisissez le code d'accès dans le champ situé à droite, puis cliquez sur <em>HACK</em>.</li>
 </ul>
 </div>
 
-The world of TwilioQuest is full of **hackable objects** like this terminal. Using the cutting edge hacking tool developed by the TwilioQuest program, you will be able to hack these objects by completing technical (and non-technical) challenges. These challenges could involve answering questions, writing code in a file on your computer, and much more.
+Le monde de TwilioQuest est rempli d'**objets piratables**, comme ce terminal. En utilisant l'outil de piratage de pointe développé par le programme TwilioQuest, vous pourrez pirater ces objets en relevant des défis techniques (et non techniques). Ces défis peuvent consister à répondre à des questions, à écrire du code dans un fichier sur votre ordinateur, et bien plus encore.
 
-To complete this challenge, you must **acquire the hacking device found on the pedestal in this room**. The passcode required to bypass the laser barrier will then appear in the box below. Type the passcode into the text field on the right and click *HACK* to bring down the laser barrier.
+Pour relever ce défi, vous devez **acquérir le dispositif de piratage qui se trouve sur le piédestal dans cette pièce**. Le code d'accès requis pour contourner la barrière laser apparaîtra alors dans la case ci-dessous. Tapez le code dans le champ de texte à droite et cliquez sur *HACK* pour faire tomber la barrière laser.
 
 <style>
 .passcode {
@@ -52,20 +52,19 @@ To complete this challenge, you must **acquire the hacking device found on the p
 
 <% if (worldState.hackingToolAcquired) { %>
 <div class="passcode passcode-open">
-<h3>PASSCODE AVAILABLE</h3>
+<h3>CODE D'ACCÈS DISPONIBLE</h3>
 <p>
-Laser bypass code is: <b>LEVEL UP</b>
+Le code de contournement du laser est : <b>LEVEL UP</b>
 </p>
 <p>
-<i>Enter this code in the text field on the right and click "HACK".</i>
+<i>Saisissez ce code dans le champ de texte situé à droite et cliquez sur "HACK".</i>
 </p>
 </div>
 <% } else { %>
 <div class="passcode passcode-locked">
-<h3>PASSCODE LOCKED</h3>
+<h3>CODE D'ACCÈS VERROUILLÉ</h3>
 <p>
-The hacking tool is required to bypass this system and see the passcode. <b>Find it on the pedestal in
-this room</b>.
+L'outil de piratage est nécessaire pour contourner ce système et voir le code d'accès. <b>Trouve-le sur le piédestal dans cette pièce</b>.
 </p>
 </div>
 <% } %>

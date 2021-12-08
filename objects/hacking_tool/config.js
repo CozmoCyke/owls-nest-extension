@@ -45,11 +45,11 @@ module.exports = {
         !levelState.hackingToolAcquired
       ) {
         world.showNotification(`
-          <i>With this hacking tool, I should be able to <span class="highlight">
-          hack the terminal</span> controlling the laser barrier in this room!</i>
-          <br/><br/>
-          (To hack an object, walk up to it and press the <span class="highlight">
-          spacebar</span> to bring up the hacking interface).
+        <i>Avec cet outil de piratage, je devrais pouvoir <span class="highlight">
+        pirater le terminal</span> contrôlant la barrière laser dans cette pièce !</i>
+        <br/><br/>
+        (Pour pirater un objet, marchez jusqu'à lui et appuyez sur la <span class="highlight">
+        barre d'espace</span> pour faire apparaître l'interface de piratage).
         `);
 
         levelState.hackingToolAcquired = true;

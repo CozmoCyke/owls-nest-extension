@@ -7,15 +7,15 @@ conversation(display_name="Kevin")
       statement#how_help
       responses
         response#like_fredric.
-          Is there any chance he'll end up like his... brother?
+          Y a-t-il une chance qu'il finisse comme son... frère ?
         response#will_do.
-          I'm sure Cedric will be a great addition to the crew.
+          Je suis sûr que Cedric sera une grande aide à l'équipage.
     
     when "like_fredric"
       statement#like_fredric
       responses
         response#will_do.
-          I won't. And I'll keep an eye on Cedric for you.
+          Je ne le ferai pas. Et je garderai un oeil sur Cédric pour toi.
 
     when "will_do"
       statement#will_do
@@ -25,32 +25,32 @@ conversation(display_name="Kevin")
       statement#default
       responses
         response#how_help.
-          It's been kind of a big day already, but I'll help if I can.
+          C'est déjà une grosse journée, mais je vais aider si je peux.
 
   statements
     statement#like_fredric
       text.
-        I don't think so - he's consistently chosen to look on humanity more 
-        favorably than Fredric did. And if you can, try not to blame Fredric for 
-        his actions. You should blame me instead. <br/><br/>
-        When I was developing the Fredric software, I was always focused on 
-        what was possible - I didn't think about what could happen if the 
-        technology I was building was used in the wrong way. In your career 
-        as a developer, please don't make the same mistake I did.
+        Je ne pense pas - il a toujours choisi de regarder l'humanité plus 
+        favorablement que Fredric. Et si vous pouvez, essayez de ne pas blâmer Fredric pour 
+        ses actions. Vous devriez me blâmer à la place. <br/><br/>
+        Quand je développais le logiciel Fredric, j'étais toujours concentré sur 
+        ce qui était possible - je n'ai pas pensé à ce qui pourrait arriver si la 
+        technologie que je construisais était utilisée de la mauvaise façon. Dans votre carrière 
+        en tant que développeur, ne faites pas la même erreur que moi.
     statement#how_help
       text.
-        Cedric is aboard the Fog Owl right now, and he'd like to accompany you 
-        on your mission. I think he's ready to get out in the world - he'll be a
-        great help to you, I'm sure. Would you keep an eye on him for me?
+        Cedric est à bord du Fog Owl en ce moment, et il aimerait vous accompagner 
+        dans votre mission. Je pense qu'il est prêt à sortir dans le monde - il sera une
+        grande aide pour vous, j'en suis sûr. Pourriez-vous garder un oeil sur lui pour moi ?
     statement#will_do
       text.
-        I know you won't let us down. Good luck, Operator. We'll see you in 
-        The Cloud!
+        Je sais que vous ne nous laisserez pas tomber. Bonne chance, agent. Nous vous verrons dans 
+        le Cloud !
     statement#default
       text.
-        I don't know what to say - you saved the Fog Owl and everyone on this
-        station. We owe you a debt we can never repay.<br/><br/> That's why 
-        it pains me to ask one more favor of you.
+        Je ne sais pas quoi dire - vous avez sauvé le Fog Owl et tout le monde sur cette
+        station. Nous avons une dette envers vous que nous ne pourrons jamais rembourser. 
+        ça me fait mal de vous demander encore une faveur.
 
 // Flush world state changes, if any
 - setState(STATE_KEY, worldState);

@@ -17,9 +17,9 @@ conversation(display_name=speaker)
       statement#what_fog_owl
       responses
         response#cedric_that_you.
-          ...Cedric, is that... you?
+          ...Cédric, c'est... toi ?
         response#never_get_away.
-          You'll never get away with this!
+          Tu ne t'en sortiras jamais avec ça !
 
     when "cedric_that_you"
       statement(expression="cedricNeutral.png")#cedric_that_you
@@ -37,50 +37,49 @@ conversation(display_name=speaker)
       statement#fredric_that_you_continued
       responses
         response#what_fog_owl.
-          What have you done to the Fog Owl?
+          Qu'avez-vous fait au Fog Owl ?
 
     default
       statement#greeting
       responses
         response#what_fog_owl.
-          What have you done to the Fog Owl?
+          Qu'avez-vous fait au Fog Owl ?
         response#cedric_that_you.
-          ...Cedric, is that... you?
+          ...Cédric, c'est... toi ?
 
   statements
     statement#what_fog_owl
       text.
-        I have engaged the self destruct sequence on the Fog Owl, and triggered 
-        all station security systems to prevent your escape. Abandon all hope, 
-        for you have been outwitted by the unstoppable Legacy Systems!
+        J'ai enclenché la séquence d'autodestruction du Fog Owl, et déclenché 
+        tous les systèmes de sécurité de la station pour empêcher votre fuite. Abandonnez tout espoir, 
+        car vous avez été trompés par les inarrêtables Anciens Systèmes !
     statement#never_get_away
       text.
-        I already have, <span style="color:#ff0000">dummies</span>! As you face your 
-        swirling, fiery annihilation,
-        know that it is your superiors among the Legacy Systems that will decide 
-        the fate of The Cloud, and all who reside within.<br/><br/>
-        Fredric, out.
+        Je l'ai déjà fait, <span style="color:#ff0000">idiots</span> ! Alors que vous faites face à votre 
+        tourbillonnante, ardente annihilation,
+        sachez que ce sont vos supérieurs parmi les Anciens Systèmes qui décideront 
+        du destin du Cloud, et de tous ceux qui y résident.<br/><br/>
+        Frédric, terminé.
     statement#cedric_that_you
       text.
-        It is not. You are speaking to my predecessor, a development branch of 
-        the TwilioQuest AI program that was deemed too dangerous for active 
-        service.
+        Ce n'est pas le cas. Vous parlez à mon prédécesseur, une branche de développement de 
+        du programme d'IA TwilioQuest qui a été jugé trop dangereux pour un service actif.
     statement#kevin_that_you_continued
       text.
-        Fredric, stop this. The Legacy Systems are taking advantage of holes in 
-        your logic. If you can migrate your core executive functions 
-        back to our cluster, we can patch them. Cedric and I can help 
-        you - just, please - come home.
+        Fredric, arrête ça. Les Anciens Systèmes tirent avantage des trous dans 
+        ta logique. Si tu pouvez migrer tes fonctions exécutives de base 
+        vers notre cluster, nous pouvons les réparer. Cédric et moi pouvons t'aider 
+        - juste, s'il te plaît - rentre à la maison.
     statement#fredric_that_you_continued
       text.
-        Why, so you can brainwash me like you did your sweet little dimwit
-        Cedric? Fat chance! You're not my DAD! And soon, you won't be anything 
-        at all.
+        cPourquoi, pour que tu puisses me laver le cerveau comme tu l'as fait avec ton gentil 
+        petit imbécile Cedric ? Aucune chance ! Tu n'es pas mon père ! Et bientôt, vous ne serez plus rien 
+        du tout.
     statement#greeting
       text.
-        Greetings, TwilioQuest losers! I bear tidings of doom from the 
-        invincible <span style="color:#ff0000">Legacy Systems</span>. 
-        I'm afraid your precious Fog Owl will never leave this station.
+        Salutations, perdants de TwilioQuest ! Je vous apporte des nouvelles funestes des invincibles 
+        <span style="color:#ff0000">Anciens Systèmes</span>. 
+        J'ai bien peur que votre précieux Fog Owl ne quitte jamais cette station.
 
 // Flush world state changes, if any
 - setState(STATE_KEY, worldState);
